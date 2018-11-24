@@ -1,6 +1,6 @@
 
 <?php
-$conn=mysqli_connect("drwc.github.io/cookingfo/", "root", "SFDASF32523qrfASEF");
+$conn=mysqli_connect("drwc.github.io", "root", "SFDASF32523qrfASEF");
 
 mysql_select_db("opencookworld", $conn);
 //mysqli_qurery($conn, "
