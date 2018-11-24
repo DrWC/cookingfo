@@ -1,7 +1,8 @@
+
 <?php
 $conn=mysqli_connect("drwc.github.io/cookingfo/", "root", "SFDASF32523qrfASEF");
 
-mysql select db("opencookworld",$conn);
+mysql_select_db("opencookworld", $conn);
 //mysqli_qurery($conn, "
 //INSERT INTO topic
   //   (title, description, created)

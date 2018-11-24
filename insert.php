@@ -14,10 +14,10 @@ include "db_info.php";
     (id, name, email, pass, title, content, wdate, ip, view)
     VALUES ('', '$name', '$email', '$pass', '$title',
     '$content', now(), '$REMOTE_ADDR', 0)";
-    $result=mysql_query($query, $conn) or die(mysql_error());
+    $result=mysqli_query($query, $conn) or die(mysqli_error());
 
     //데이터베이스와의 연결 종료
-    mysql_close($conn);
+    mysqli_close($conn);
 
     // 새 글 쓰기인 경우 리스트로..
     echo ("<meta http-equiv='Refresh' content='1; URL=list.php'>");
@@ -81,8 +81,8 @@ font-size : 9pt;}
     $no = $_GET[no];
 
     // 먼저 쓴 글의 정보를 가져온다.
-    $result=mysql_query("SELECT * FROM board WHERE id=$id", $conn);
-    $row=mysql_fetch_array($result);
+    $result=mysqli_query("SELECT * FROM board WHERE id=$id", $conn);
+    $row=mysqli_fetch_array($result);
 ?>
 <!-- 입력 부분 -->
     <tr>
